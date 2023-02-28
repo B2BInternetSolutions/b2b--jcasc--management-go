@@ -1,5 +1,5 @@
 jenkins:
-  systemMessage: "Mike - Welcome to Jenkins test 2!"
+  systemMessage: "Mike - Welcome to Jenkins test 3!"
   labelString: "jenkins-controller-for-seed"
   mode: "EXCLUSIVE"
 
