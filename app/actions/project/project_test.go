@@ -57,7 +57,7 @@ const testJcascMavenCredentialsId = "maven-credentials"
 const testJcascNpmCredentialsId = "npm-credentials"
 const testJcascVcsCredentialsId = "vcs-credentials"
 
-const testJenkinsHelmMasterJcascConfigUrl = "https://raw.githubusercontent.com/B2BInternetSolutions/k8s-jcasc-management-go/master/{{ .Base.Namespace }}/jcasc_config.yaml"
+const testJenkinsHelmMasterJcascConfigUrl = "https://raw.githubusercontent.com/B2BInternetSolutions/b2b--jcasc--management-go/main/{{ .Base.Namespace }}/jcasc_config.yaml"
 
 //const testJenkinsHelmMasterJcascConfigUrl = "https://raw.githubusercontent.com/Ragin-LundF/k8s-jcasc-project-config/master/{{ .Base.Namespace }}/jcasc_config.yaml"
 

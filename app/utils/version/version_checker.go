@@ -59,7 +59,7 @@ func readLocalVersion() (version string, err error) {
 }
 
 func receiveVersionFromGit() (version string, err error) {
-	resp, err := http.Get("https://raw.githubusercontent.com/B2BInternetSolutions/k8s-jcasc-management-go/main/VERSION")
+	resp, err := http.Get("https://raw.githubusercontent.com/B2BInternetSolutions/b2b--jcasc--management-go/main/main/VERSION")
 	//resp, err := http.Get("https://raw.githubusercontent.com/Ragin-LundF/k8s-jcasc-management-go/main/VERSION")
 
 	if err != nil {
@@ -68,7 +68,7 @@ func receiveVersionFromGit() (version string, err error) {
 
 	// temporary hack for getting version from both URLs
 	if resp.StatusCode == 404 {
-		resp, err = http.Get("https://raw.githubusercontent.com/B2BInternetSolutions/k8s-jcasc-management-go/master/VERSION")
+		resp, err = http.Get("https://raw.githubusercontent.com/B2BInternetSolutions/b2b--jcasc--management-go/main/VERSION")
 		//resp, err = http.Get("https://raw.githubusercontent.com/Ragin-LundF/k8s-jcasc-management-go/master/VERSION")
 		if err != nil {
 			return "", err
