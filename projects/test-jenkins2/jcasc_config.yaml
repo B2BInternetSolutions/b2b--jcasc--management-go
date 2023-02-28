@@ -354,7 +354,7 @@ jobs:
               git {
                   remote {
                       url('https://github.com/B2BInternetSolutions/b2b--infrastructure--autoscaled-eks-cluster--v03--jenkins-jobs.git')
-                      credentials("vcs-notification-credentialsid")
+                      credentials("b2b--mikeowen--github-credentialsid")
                   }
                   extensions {
                     relativeTargetDirectory('jobdefinition')
