@@ -269,9 +269,9 @@ jenkins:
                 resourceRequestMemory: "500Mi"
                 resourceLimitMemory: "2Gi"
                 # March 1st 2023 - MJO Added the following
-                env:
-                - name: DOCKER_TLS_VERIFY
-                  value: ""
+                #env:
+                #- name: DOCKER_TLS_VERIFY
+                #  value: ""
             # Those variables are required for the communication with the agents
             envVars:
               - envVar:
@@ -284,7 +284,10 @@ jenkins:
               - envVar:
                   key: "DOCKER_HOST"
                   value: "tcp://localhost:2375"
-
+                # March 1st 2023 - MJO Added the following
+              - envVar:
+                  key: "DOCKER_TLS_VERIFY"
+                  value: ""
 # JcasC configuration for unclassified plugins
 unclassified:
   # URL under which the Jenkins is reachable.
