@@ -253,7 +253,7 @@ jenkins:
               # You also can try to bring the rootless container up to life, but this is more tricky.
               # With this special configuration the other build containers do not need root or privileged deployments.
               - name: "docker"
-                image: "docker:dind"
+                image: "docker:latest"
                 privileged: true
                 alwaysPullImage: true
                 workingDir: "/home/jenkins/agent"
@@ -354,7 +354,7 @@ jobs:
               git {
                   remote {
                       url('https://github.com/B2BInternetSolutions/b2b--infrastructure--autoscaled-eks-cluster--v03--jenkins-jobs.git')
-                      credentials("b2b--mikeowen--github-credentialsid")
+                      credentials("b2b--jenkins--gh-access--fine-grn-token")
                   }
                   extensions {
                     relativeTargetDirectory('jobdefinition')
