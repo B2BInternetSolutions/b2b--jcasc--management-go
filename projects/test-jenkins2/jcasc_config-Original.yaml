@@ -225,12 +225,11 @@ jenkins:
             label: "pipeline-base-container"
             imagePullSecrets:
               - name: docker-registry-credentialsid
-            
             # add the Docker sockets to the hostPathVolume, that we can use docker commands
-            #volumes:
-            #  - hostPathVolume:
-            #      mountPath: "/var/run/docker.sock"
-            #      hostPath: "/var/run/docker.sock"
+            volumes:
+              - hostPathVolume:
+                  mountPath: "/var/run/docker.sock"
+                  hostPath: "/var/run/docker.sock"
             containers:
               # If you want to have all deployed build container under your control, you need a JNLP container with the name "jnlp".
               # This is required by the kubernetes plugin of Jenkins.
@@ -268,10 +267,6 @@ jenkins:
                 resourceLimitCpu: "1500m"
                 resourceRequestMemory: "500Mi"
                 resourceLimitMemory: "2Gi"
-                # March 1st 2023 - MJO Added the following
-                env:
-                - name: DOCKER_TLS_VERIFY
-                  value: ""
             # Those variables are required for the communication with the agents
             envVars:
               - envVar:
@@ -280,10 +275,6 @@ jenkins:
               - envVar:
                   key: "JENKINS_TUNNEL"
                   value: "jenkins-controller-agent:50000"
-              # March 1st 2023 - MJO Added / removed the following
-              - envVar:
-                  key: DOCKER_HOST
-                  value: "tcp://localhost:2375"
 
 # JcasC configuration for unclassified plugins
 unclassified:
