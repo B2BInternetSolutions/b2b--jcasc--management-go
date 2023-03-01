@@ -238,7 +238,7 @@ jenkins:
               # an own image here, that is located in an private registry to have the full control over the used containers and their versions.
               - name: "jnlp"
                 #image: "jenkins/inbound-agent:latest"
-                image: "jenkins/jnlp-slave:latest"
+                image: "jenkins/jnlp-slave:latest-jdk11"
                 privileged: false
                 alwaysPullImage: true
                 workingDir: "/home/jenkins/agent"
