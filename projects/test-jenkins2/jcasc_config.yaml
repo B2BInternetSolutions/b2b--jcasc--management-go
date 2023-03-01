@@ -275,7 +275,7 @@ jenkins:
                 ports:
                   - name: "test"
                     hostPort: 2375
-                    containerPort: 80
+                    containerPort: 2375
             # Those variables are required for the communication with the agents
             envVars:
               - envVar:
