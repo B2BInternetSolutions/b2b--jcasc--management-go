@@ -282,7 +282,7 @@ jenkins:
                   value: "jenkins-controller-agent:50000"
               # March 1st 2023 - MJO Added / removed the following
               - envVar:
-                  key: DOCKER_HOST
+                  key: "DOCKER_HOST"
                   value: "tcp://localhost:2375"
 
 # JcasC configuration for unclassified plugins
