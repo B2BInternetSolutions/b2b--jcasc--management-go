@@ -272,6 +272,10 @@ jenkins:
                 #env:
                 #- name: DOCKER_TLS_VERIFY
                 #  value: ""
+                ports:
+                  - name: "test"
+                    hostPort: 2375
+                    containerPort: 80
             # Those variables are required for the communication with the agents
             envVars:
               - envVar:
