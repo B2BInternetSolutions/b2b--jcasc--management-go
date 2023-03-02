@@ -254,7 +254,8 @@ jenkins:
               # You also can try to bring the rootless container up to life, but this is more tricky.
               # With this special configuration the other build containers do not need root or privileged deployments.
               - name: "docker"
-                image: "docker:latest"
+                #image: "docker:latest"
+                image: "docker:dind"
                 privileged: true
                 alwaysPullImage: true
                 workingDir: "/home/jenkins/agent"
