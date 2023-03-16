@@ -61,7 +61,15 @@ controller:
       enabled: false
       # folder in the pod that should hold the collected dashboards:
       folder: "https://raw.githubusercontent.com/B2BInternetSolutions/b2b--jcasc--management-go/main/projects/test-jenkins2/jcasc_config.yaml"
-
+  affinity: 
+    nodeAffinity: 
+      requiredDuringSchedulingIgnoredDuringExecution: 
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: jenkins-development
+            operator: In 
+            values:
+            - 'yes'
 persistence:
   existingClaim: 
   storageClass: k8s-storage-class--efs
@@ -85,4 +93,6 @@ k8smanagement:
       - demo-dev
       - demo-qa
       - demo-preview
+
+
       
