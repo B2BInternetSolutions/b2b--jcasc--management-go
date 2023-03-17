@@ -94,5 +94,10 @@ k8smanagement:
       - demo-qa
       - demo-preview
 
+# Ensure the Agents run on specific nodes so they don't overwhelm the production Nodes and evict live services
+agent:
+  nodeSelector: 
+    jenkins-development: "yes"
+
 
       
