@@ -70,6 +70,8 @@ controller:
             operator: In 
             values:
             - 'yes'
+  additionalPlugins:
+    - snyk-security-scanner:3.2.6
 persistence:
   existingClaim: 
   storageClass: k8s-storage-class--efs
