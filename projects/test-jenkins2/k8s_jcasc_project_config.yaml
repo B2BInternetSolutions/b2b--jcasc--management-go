@@ -26,18 +26,17 @@ jcasc:
             adminPassword: $2a$04$UNxiNvJN6R3me9vybVQr/OzpMhgobih8qbxDpGy3lZmmmwc6t48ty
             userPassword: $2a$04$BFPq6fSa9KGKrlIktz/C8eSFrrG/gglnW1eXWMSjgtCSx36mMOSNm
     systemMessage: Mike - Welcome to Jenkins test 2!
-    
-    tool:
-        snyk:
-            installations:
-            - name: "snykPluginInstall"
-            properties:
-            - installSource:
-                installers:
-                - snykInstaller:
-                    platform: AUTO
-                    updatePolicyIntervalHours: 24
-                    version: "latest"
+tool:
+    snyk:
+        installations:
+        - name: "snykPluginInstall"
+        properties:
+        - installSource:
+            installers:
+            - snykInstaller:
+                platform: AUTO
+                updatePolicyIntervalHours: 24
+                version: "latest"
 jenkinsHelmValues:
     controller:
         image: jenkins/jenkins
