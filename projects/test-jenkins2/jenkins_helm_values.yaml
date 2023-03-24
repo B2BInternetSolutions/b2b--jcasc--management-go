@@ -72,6 +72,7 @@ controller:
             - 'yes'
   additionalPlugins:
     - snyk-security-scanner:3.2.6
+    - configuration-as-code-groovy:1.1
 persistence:
   existingClaim: 
   storageClass: k8s-storage-class--efs
