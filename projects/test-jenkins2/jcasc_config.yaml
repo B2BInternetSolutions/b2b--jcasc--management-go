@@ -311,16 +311,6 @@ unclassified:
                 id: "my-pipeline-library"
                 remote: "https://github.com/Ragin-LundF/k8s-jcasc-pipeline-library.git"
                 credentialsId: "vcs-notification-credentialsid"
-#  snyk:
-#      installations:
-#      - name: "snykPluginInstall"
-#      properties:
-#      - installSource:
-#          installers:
-#          - snykInstaller:
-#              platform: AUTO
-#              updatePolicyIntervalHours: 24
-#              version: "latest"
 
   # Definition of a sonar server if required
   sonarglobalconfiguration:
@@ -383,3 +373,15 @@ jobs:
               scm('* * * * *')
           }
       }
+tool:
+  snyk:
+      installations:
+      - name: "snykPluginInstall"
+      properties:
+      - installSource:
+          installers:
+          - snykInstaller:
+              platform: AUTO
+              updatePolicyIntervalHours: 24
+              version: "latest"
+              
