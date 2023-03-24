@@ -373,15 +373,15 @@ jobs:
               scm('* * * * *')
           }
       }
-tool:
-  snyk:
-      installations:
-      - name: "snykPluginInstall"
-      properties:
-      - installSource:
-          installers:
-          - snykInstaller:
-              platform: AUTO
-              updatePolicyIntervalHours: 24
-              version: "latest"
+#tool:
+#  snyk:
+#      installations:
+#      - name: "snykPluginInstall"
+#      properties:
+#      - installSource:
+#          installers:
+#          - snykInstaller:
+#              platform: AUTO
+#              updatePolicyIntervalHours: 24
+#              version: "latest"
               
