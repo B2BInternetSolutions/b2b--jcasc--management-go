@@ -401,7 +401,7 @@ groovy:
       import hudson.tasks.*;
       import io.snyk.jenkins.tools.*;
 
-      def instance = Jenkins.getInstance();
+      def instance = jenkins.model.Jenkins.getInstance();
       def snyk_name = "SnykLatest";
       def snyk_home = "";
       def snyk_installer = new SnykInstaller("", "latest", 24L, null);
@@ -409,7 +409,7 @@ groovy:
 
       println("[init.groovy.d] START Configuring Snyk Installation...");
       // Get the GlobalConfiguration descriptor of Snyk plugin.
-      def snyk_conf = instance.getDescriptor("io.snyk.jenkins.tools.SnykInstallation");
+      def snyk_conf = jenkins.model.Jenkins.instance.getDescriptor("io.snyk.jenkins.tools.SnykInstallation");
 
       def snyk_inst = new SnykInstallation(
           snyk_name,
