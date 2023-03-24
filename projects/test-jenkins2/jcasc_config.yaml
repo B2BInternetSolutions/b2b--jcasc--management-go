@@ -373,6 +373,16 @@ jobs:
               scm('* * * * *')
           }
       }
+tool:
+  snyk:
+      installations:
+      - name: "snykPluginInstall"
+      properties:
+      - installSource:
+          installers:
+          - snykInstaller:
+              updatePolicyIntervalHours: 24
+              version: "latest"
 
 groovy:
   - script: |
