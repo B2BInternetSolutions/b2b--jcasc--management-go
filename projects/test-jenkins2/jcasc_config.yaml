@@ -381,8 +381,7 @@ tool:
       - installSource:
           installers:
           - snykInstaller:
-              label: ""
-              platform: AUTO
+              platform: "AUTO"
               updatePolicyIntervalHours: 24
               version: "latest"
               
