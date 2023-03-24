@@ -425,7 +425,7 @@ groovy:
           installation = (SnykInstallation) it;
           if (snyk_inst.getName() == installation.getName()) {
               snyk_inst_exists = true;
-              println("Found existing installation: " + installation.getName();)
+              println("Found existing installation: " + installation.getName());
           };
       };
       if (!snyk_inst_exists) {
