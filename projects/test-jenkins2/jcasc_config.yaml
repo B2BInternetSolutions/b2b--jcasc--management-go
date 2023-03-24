@@ -382,6 +382,6 @@ tool:
           installers:
           - snykInstaller:
               platform: "AUTO"
-              updatePolicyIntervalHours: 24
+              updatePolicyIntervalHours: 24L
               version: "latest"
               
