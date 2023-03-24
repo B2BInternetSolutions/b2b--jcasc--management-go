@@ -417,8 +417,10 @@ groovy:
           [snyk_properties]
       );
 
+      println("Test 1");
       // Only add the new Snyk setting if it does not exist - do not overwrite existing config
       def snyk_installations = snyk_conf.getInstallations();
+      println("Test 2");
 
       def snyk_inst_exists = false;
       snyk_installations.each {
@@ -428,12 +430,13 @@ groovy:
               println("Found existing installation: " + installation.getName());
           };
       };
+      println("Test 3");
       if (!snyk_inst_exists) {
           snyk_installations += snyk_inst;
           snyk_conf.setInstallations((SnykInstallation[]) snyk_installations);
           snyk_conf.save();
       };
-
+      println("Test 4");
       // Save the state
       instance.save();
 
