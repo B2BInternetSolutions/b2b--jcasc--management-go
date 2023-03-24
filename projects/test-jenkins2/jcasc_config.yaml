@@ -375,7 +375,7 @@ jobs:
       }
 
 groovy:
-  - script: >
+  - script: |
       /* 
         THE FOLLOWING snyk plugin Global Tool Configuration IN THEORY should be work 
         in the JCasC BUT in practice it doesn't so to get around it we have added the 
