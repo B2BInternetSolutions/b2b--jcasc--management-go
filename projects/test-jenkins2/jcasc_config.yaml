@@ -11,23 +11,23 @@ jenkins:
             description: "Jenkins administrators"
             permissions:
               - "Overall/Administer"
-            assignments:
-              - "admin"
+            #assignments:
+            #  - "admin"
           - name: "readonly"
             description: "Read-only users"
             permissions:
               - "Overall/Read"
               - "Job/Read"
-            assignments:
-              - "authenticated"
+            #assignments:
+            #  - "authenticated"
         items:
           - name: "Project User"
             description: "User for the project"
             pattern: ".*"
             permissions:
               - "Job/Build"
-            assignments:
-              - "project-user"
+            #assignments:
+            #  - "project-user"
   securityRealm:
     local:
       allowsSignup: false
