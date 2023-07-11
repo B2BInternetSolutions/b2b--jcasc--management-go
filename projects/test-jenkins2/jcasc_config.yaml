@@ -7,25 +7,29 @@ jenkins:
     roleBased:
       roles:
         global:
-          - name: "admin"
-            description: "Jenkins administrators"
-            permissions:
-              - "Overall/Administer"
-            #assignments:
-            #  - "admin"
-          - name: "readonly"
-            description: "Read-only users"
-            permissions:
-              - "Overall/Read"
-              - "Job/Read"
-            #assignments:
-            #  - "authenticated"
-        items:
-          - name: "Project User"
-            description: "User for the project"
-            pattern: ".*"
-            permissions:
-              - "Job/Build"
+        - entries:
+          - user: "admin"
+          name: "admin"
+          description: "Jenkins administrators"
+          permissions:
+            - "Overall/Administer"
+            - "Overall/Read"
+          pattern: ".*"
+              #assignments:
+              #  - "admin"
+              #- name: "readonly"
+              #description: "Read-only users"
+              #permissions:
+              #  - "Overall/Read"
+              #  - "Job/Read"
+              #assignments:
+              #  - "authenticated"
+        #items:
+        #  - name: "Project User"
+        #    description: "User for the project"
+        #    pattern: ".*"
+        #    permissions:
+        #      - "Job/Build"
             #assignments:
             #  - "project-user"
   securityRealm:
