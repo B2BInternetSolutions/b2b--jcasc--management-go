@@ -13,17 +13,14 @@ jenkins:
           description: "Jenkins administrators"
           permissions:
             - "Overall/Administer"
-            - "Overall/Read"
           pattern: ".*"
-              #assignments:
-              #  - "admin"
-              #- name: "readonly"
-              #description: "Read-only users"
-              #permissions:
-              #  - "Overall/Read"
-              #  - "Job/Read"
-              #assignments:
-              #  - "authenticated"
+          - group: "authenticated"
+          name: "readonly"
+          description: "Authenticated Users"
+          permissions:
+            - "Overall/Read"
+            - "Job/Read"
+          pattern: ".*"
         items:
         - entries:
           - user: "project-user"
