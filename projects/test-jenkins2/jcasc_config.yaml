@@ -14,6 +14,7 @@ jenkins:
           permissions:
             - "Overall/Administer"
           pattern: ".*"
+        - entries:
           - group: "authenticated"
           name: "readonly"
           description: "Authenticated Users"
