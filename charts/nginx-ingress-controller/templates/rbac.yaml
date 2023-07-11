@@ -11,7 +11,7 @@ metadata:
     "app.kubernetes.io/instance": "{{ .Release.Name }}"
 
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   name: {{ .Values.k8sJenkinsMgmt.ingress.deploymentName }}-clusterrole-{{ .Values.k8sJenkinsMgmt.ingress.namespace }}
@@ -69,7 +69,7 @@ rules:
       - update
 
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
 metadata:
   name: {{ .Values.k8sJenkinsMgmt.ingress.deploymentName }}-role-{{ .Values.k8sJenkinsMgmt.ingress.namespace }}
@@ -114,7 +114,7 @@ rules:
       - get
 
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
 metadata:
   name: {{ .Values.k8sJenkinsMgmt.ingress.deploymentName }}-role-nisa-binding-{{ .Values.k8sJenkinsMgmt.ingress.namespace }}
@@ -132,7 +132,7 @@ subjects:
     namespace: {{ .Values.k8sJenkinsMgmt.ingress.namespace }}
 
 ---
-apiVersion: rbac.authorization.k8s.io/v1beta1
+apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: {{ .Values.k8sJenkinsMgmt.ingress.deploymentName }}-clusterrole-nisa-binding-{{ .Values.k8sJenkinsMgmt.ingress.namespace }}
