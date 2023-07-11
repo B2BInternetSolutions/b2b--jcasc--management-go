@@ -12,15 +12,15 @@ jenkins:
           name: "admin"
           description: "Jenkins administrators"
           permissions:
-            - "Overall/Administer"
+          - "Overall/Administer"
           pattern: ".*"
         - entries:
           - group: "authenticated"
           name: "readonly"
           description: "Authenticated Users"
           permissions:
-            - "Overall/Read"
-            - "Job/Read"
+          - "Overall/Read"
+          - "Job/Read"
           pattern: ".*"
         items:
         - entries:
