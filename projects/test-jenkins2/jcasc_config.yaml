@@ -24,7 +24,14 @@ jenkins:
               #  - "Job/Read"
               #assignments:
               #  - "authenticated"
-        #items:
+        items:
+        - entries:
+          - user: "project-user"
+          name: "Project User"
+          description: "User for the project"
+          permissions:
+            - "Job/Build"
+          pattern: ".*"
         #  - name: "Project User"
         #    description: "User for the project"
         #    pattern: ".*"
