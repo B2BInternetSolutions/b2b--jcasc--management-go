@@ -30,13 +30,6 @@ jenkins:
           permissions:
             - "Job/Build"
           pattern: ".*"
-        #  - name: "Project User"
-        #    description: "User for the project"
-        #    pattern: ".*"
-        #    permissions:
-        #      - "Job/Build"
-            #assignments:
-            #  - "project-user"
   securityRealm:
     local:
       allowsSignup: false
